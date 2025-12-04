@@ -1,41 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\",
+  "WorkspaceRootPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.webapi\\content\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\projeto_microondas\\microondas.webapi\\content\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|solutionrelative:microondas.webapi\\content\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.business\\servicos\\servicomicroondas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|solutionrelative:microondas.business\\servicos\\servicomicroondas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{152985C9-D538-433A-81F6-A30603E17F5A}|Microondas.Infrastructure\\Microondas.Infrastructure.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.infrastructure\\repositorios\\repositoriojsonprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{152985C9-D538-433A-81F6-A30603E17F5A}|Microondas.Infrastructure\\Microondas.Infrastructure.csproj|solutionrelative:microondas.infrastructure\\repositorios\\repositoriojsonprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.webapi\\controllers\\programascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|solutionrelative:microondas.webapi\\controllers\\programascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.business\\servicos\\servicoprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|solutionrelative:microondas.business\\servicos\\servicoprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.webapi\\controllers\\microondascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|solutionrelative:microondas.webapi\\controllers\\microondascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\microondas.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|solutionrelative:microondas.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.webapi\\filtros\\filtroexcecaoglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\projeto_microondas\\microondas.webapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|solutionrelative:microondas.webapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\microondas.webapi\\controllers\\microondascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|solutionrelative:microondas.webapi\\controllers\\microondascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{152985C9-D538-433A-81F6-A30603E17F5A}|Microondas.Infrastructure\\Microondas.Infrastructure.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\projeto_microondas\\microondas.infrastructure\\repositorios\\repositoriojsonprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{152985C9-D538-433A-81F6-A30603E17F5A}|Microondas.Infrastructure\\Microondas.Infrastructure.csproj|solutionrelative:microondas.infrastructure\\repositorios\\repositoriojsonprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\projeto_microondas\\microondas.business\\servicos\\servicomicroondas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|solutionrelative:microondas.business\\servicos\\servicomicroondas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\microondas.webapi\\controllers\\programascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|solutionrelative:microondas.webapi\\controllers\\programascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\projeto_microondas\\microondas.business\\servicos\\servicoprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|solutionrelative:microondas.business\\servicos\\servicoprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\microondas.webapi\\filtros\\filtroexcecaoglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{953BA177-9F87-4339-A88A-58CAE1B3220E}|Microondas.WebApi\\Microondas.WebApi.csproj|solutionrelative:microondas.webapi\\filtros\\filtroexcecaoglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\microondas.business\\servicos\\iservicoprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|c:\\projeto_microondas\\microondas\\microondasdigital\\projeto_microondas\\microondas.business\\servicos\\iservicoprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EE521AB-A9F0-47B0-AF6E-B98E08AF2191}|Microondas.Business\\Microondas.Business.csproj|solutionrelative:microondas.business\\servicos\\iservicoprogramas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,15 +50,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Web.config",
+              "RelativeDocumentMoniker": "Microondas.WebApi\\Web.config",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Web.config",
+              "RelativeToolTip": "Microondas.WebApi\\Web.config",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-04T17:26:29.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RepositorioJsonProgramas.cs",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Infrastructure\\Repositorios\\RepositorioJsonProgramas.cs",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Infrastructure\\Repositorios\\RepositorioJsonProgramas.cs",
               "RelativeDocumentMoniker": "Microondas.Infrastructure\\Repositorios\\RepositorioJsonProgramas.cs",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Infrastructure\\Repositorios\\RepositorioJsonProgramas.cs",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Infrastructure\\Repositorios\\RepositorioJsonProgramas.cs",
               "RelativeToolTip": "Microondas.Infrastructure\\Repositorios\\RepositorioJsonProgramas.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAAwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -65,11 +82,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "index.html",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Content\\index.html",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Content\\index.html",
               "RelativeDocumentMoniker": "Microondas.WebApi\\Content\\index.html",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Content\\index.html",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Content\\index.html",
               "RelativeToolTip": "Microondas.WebApi\\Content\\index.html",
-              "ViewState": "AgIAALwAAAAAAAAAAAAWwKUAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-12-04T03:59:10.315Z",
               "EditorCaption": ""
@@ -77,93 +94,88 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProgramasController.cs",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Controllers\\ProgramasController.cs",
-              "RelativeDocumentMoniker": "Microondas.WebApi\\Controllers\\ProgramasController.cs",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Controllers\\ProgramasController.cs",
-              "RelativeToolTip": "Microondas.WebApi\\Controllers\\ProgramasController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T03:56:35.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "MicroondasController.cs",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Controllers\\MicroondasController.cs",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Controllers\\MicroondasController.cs",
               "RelativeDocumentMoniker": "Microondas.WebApi\\Controllers\\MicroondasController.cs",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Controllers\\MicroondasController.cs",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Controllers\\MicroondasController.cs",
               "RelativeToolTip": "Microondas.WebApi\\Controllers\\MicroondasController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA5wBIAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T03:55:26.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ServicoProgramas.cs",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\Servicos\\ServicoProgramas.cs",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\Servicos\\ServicoProgramas.cs",
               "RelativeDocumentMoniker": "Microondas.Business\\Servicos\\ServicoProgramas.cs",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\Servicos\\ServicoProgramas.cs",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\Servicos\\ServicoProgramas.cs",
               "RelativeToolTip": "Microondas.Business\\Servicos\\ServicoProgramas.cs",
               "ViewState": "AgIAAGIAAAAAAAAAAAAswIMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T03:44:17.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T03:44:17.744Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ServicoMicroondas.cs",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\Servicos\\ServicoMicroondas.cs",
-              "RelativeDocumentMoniker": "Microondas.Business\\Servicos\\ServicoMicroondas.cs",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\Servicos\\ServicoMicroondas.cs",
-              "RelativeToolTip": "Microondas.Business\\Servicos\\ServicoMicroondas.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAADwv6oAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T03:40:21.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FiltroExcecaoGlobal.cs",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Filtros\\FiltroExcecaoGlobal.cs",
-              "RelativeDocumentMoniker": "Microondas.WebApi\\Filtros\\FiltroExcecaoGlobal.cs",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Filtros\\FiltroExcecaoGlobal.cs",
-              "RelativeToolTip": "Microondas.WebApi\\Filtros\\FiltroExcecaoGlobal.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowB4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T03:48:41.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Microondas.WebApi\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.WebApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Microondas.WebApi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAowB0AAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAADwvzkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T03:51:19.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProgramasController.cs",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Controllers\\ProgramasController.cs",
+              "RelativeDocumentMoniker": "Microondas.WebApi\\Controllers\\ProgramasController.cs",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Controllers\\ProgramasController.cs",
+              "RelativeToolTip": "Microondas.WebApi\\Controllers\\ProgramasController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T03:56:35.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServicoMicroondas.cs",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\Servicos\\ServicoMicroondas.cs",
+              "RelativeDocumentMoniker": "Microondas.Business\\Servicos\\ServicoMicroondas.cs",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\Servicos\\ServicoMicroondas.cs",
+              "RelativeToolTip": "Microondas.Business\\Servicos\\ServicoMicroondas.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAADwv6oAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T03:40:21.569Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "FiltroExcecaoGlobal.cs",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Filtros\\FiltroExcecaoGlobal.cs",
+              "RelativeDocumentMoniker": "Microondas.WebApi\\Filtros\\FiltroExcecaoGlobal.cs",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.WebApi\\Filtros\\FiltroExcecaoGlobal.cs",
+              "RelativeToolTip": "Microondas.WebApi\\Filtros\\FiltroExcecaoGlobal.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowB4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T03:48:41.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IServicoProgramas.cs",
-              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\Servicos\\IServicoProgramas.cs",
+              "DocumentMoniker": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\Servicos\\IServicoProgramas.cs",
               "RelativeDocumentMoniker": "Microondas.Business\\Servicos\\IServicoProgramas.cs",
-              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\Servicos\\IServicoProgramas.cs",
+              "ToolTip": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\Servicos\\IServicoProgramas.cs",
               "RelativeToolTip": "Microondas.Business\\Servicos\\IServicoProgramas.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T03:43:29.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T03:43:29.005Z"
             }
           ]
         }

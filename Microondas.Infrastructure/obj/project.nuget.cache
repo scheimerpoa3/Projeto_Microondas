@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CKtIFxAh/LA=",
+  "dgSpecHash": "vwBHIIQaALk=",
   "success": true,
-  "projectFilePath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Infrastructure\\Microondas.Infrastructure.csproj",
+  "projectFilePath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Infrastructure\\Microondas.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\schei\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\5.3.0\\microsoft.identitymodel.jsonwebtokens.5.3.0.nupkg.sha512",
     "C:\\Users\\schei\\.nuget\\packages\\microsoft.identitymodel.logging\\5.3.0\\microsoft.identitymodel.logging.5.3.0.nupkg.sha512",

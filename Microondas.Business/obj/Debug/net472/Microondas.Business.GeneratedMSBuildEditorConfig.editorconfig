@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = Microondas.Business
-build_property.ProjectDir = C:\Projeto_microondas\Microondas\MicroondasDigital\Microondas.Business\
+build_property.ProjectDir = C:\Projeto_microondas\Microondas\MicroondasDigital\Projeto_Microondas\Microondas.Business\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

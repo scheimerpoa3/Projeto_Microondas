@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kVOADtHvWGk=",
+  "dgSpecHash": "rHXu5yUGwOI=",
   "success": true,
-  "projectFilePath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Tests\\Microondas.Tests.csproj",
+  "projectFilePath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Tests\\Microondas.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\schei\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\schei\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

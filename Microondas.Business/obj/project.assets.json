@@ -482,11 +482,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\Microondas.Business.csproj",
+      "projectUniqueName": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\Microondas.Business.csproj",
       "projectName": "Microondas.Business",
-      "projectPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\Microondas.Business.csproj",
+      "projectPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\Microondas.Business.csproj",
       "packagesPath": "C:\\Users\\schei\\.nuget\\packages\\",
-      "outputPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Business\\obj\\",
+      "outputPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -511,11 +511,11 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Domain\\Microondas.Domain.csproj": {
-              "projectPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Domain\\Microondas.Domain.csproj"
+            "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Domain\\Microondas.Domain.csproj": {
+              "projectPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Domain\\Microondas.Domain.csproj"
             },
-            "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Infrastructure\\Microondas.Infrastructure.csproj": {
-              "projectPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Infrastructure\\Microondas.Infrastructure.csproj"
+            "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Infrastructure\\Microondas.Infrastructure.csproj": {
+              "projectPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Infrastructure\\Microondas.Infrastructure.csproj"
             }
           }
         }

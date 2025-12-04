@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Domain\\Microondas.Domain.csproj": {}
+    "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Domain\\Microondas.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Domain\\Microondas.Domain.csproj": {
+    "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Domain\\Microondas.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Domain\\Microondas.Domain.csproj",
+        "projectUniqueName": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Domain\\Microondas.Domain.csproj",
         "projectName": "Microondas.Domain",
-        "projectPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Domain\\Microondas.Domain.csproj",
+        "projectPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Domain\\Microondas.Domain.csproj",
         "packagesPath": "C:\\Users\\schei\\.nuget\\packages\\",
-        "outputPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Microondas.Domain\\obj\\",
+        "outputPath": "C:\\Projeto_microondas\\Microondas\\MicroondasDigital\\Projeto_Microondas\\Microondas.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
