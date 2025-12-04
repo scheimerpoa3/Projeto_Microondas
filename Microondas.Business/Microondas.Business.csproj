@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Servicos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microondas.Domain\Microondas.Domain.csproj" />
+    <ProjectReference Include="..\Microondas.Infrastructure\Microondas.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

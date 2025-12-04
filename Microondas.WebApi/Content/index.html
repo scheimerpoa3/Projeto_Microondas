@@ -1,0 +1,680 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title style="font-size=14px">Micro-ondas Digital - Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            padding: 10px 12px;
+        }
+
+        input, select {
+            margin: 3px;
+        }
+
+        button {
+            margin: 3px;
+        }
+
+        #statusAuth {
+            font-weight: bold;
+        }
+
+        .italico {
+            font-style: italic;
+        }
+
+        /* Layout dos controles do micro-ondas */
+        .controles-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 32px;
+            align-items: flex-start;
+        }
+
+        .controles-col {
+            flex: 1 1 260px;
+            min-width: 260px;
+        }
+
+            .controles-col h3 {
+                margin: 0 0 6px 0;
+                font-size: 14px;
+            }
+
+        .linha-campos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            align-items: flex-end;
+            margin-bottom: 10px;
+        }
+
+            .linha-campos label {
+                display: flex;
+                flex-direction: column;
+                font-size: 13px;
+            }
+
+            .linha-campos input {
+                max-width: 90px;
+            }
+
+        .linha-botoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        #statusContainer {
+            border: none;
+            border-radius: 6px;
+            padding: 8px 12px;
+            width: 100%;
+            max-width: 100vw;
+            min-height: 140px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            background: #f8f8f8;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        #statusTitulo {
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            line-height: 1.1;
+        }
+
+        #status {
+            margin-top: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Micro-ondas Digital</h1>
+
+    <!-- AUTENTICAÇÃO -->
+    <fieldset>
+        <legend>Autenticação</legend>
+        <div>
+            <label>
+                Usuário:
+                <input id="usuario" type="text" value="admin" />
+            </label>
+            <label>
+                Senha:
+                <input id="senha" type="password" value="" />
+            </label>
+            <button id="btnLogin" type="button">Login</button>
+            <button id="btnLogout" type="button">Logout</button>
+        </div>
+        <div id="statusAuth">Não autenticado</div>
+    </fieldset>
+
+    <!-- SELEÇÃO DE PROGRAMA -->
+    <fieldset>
+        <legend>Programas de aquecimento</legend>
+        <label>
+            Programa:
+            <select id="programa">
+                <option value="">-- Nenhum (tempo manual) --</option>
+            </select>
+        </label>
+        <div id="detalhesPrograma"></div>
+    </fieldset>
+
+    <!-- CADASTRO DE PROGRAMA CUSTOMIZADO -->
+    <fieldset>
+        <legend>Cadastro de programa customizado</legend>
+
+        <div style="display:flex; flex-wrap:wrap; gap:12px 24px; align-items:flex-end; margin-bottom:8px;">
+            <label>
+                Nome:<br />
+                <input id="progNome" type="text" />
+            </label>
+
+            <label>
+                Alimento:<br />
+                <input id="progAlimento" type="text" />
+            </label>
+
+            <label>
+                Tempo (s):<br />
+                <input id="progTempo" type="number" min="1" max="3600" />
+            </label>
+
+            <label>
+                Potência (1..10):<br />
+                <input id="progPotencia" type="number" min="1" max="10" />
+            </label>
+
+            <label>
+                Caractere:<br />
+                <input id="progCaractere" type="text" maxlength="1" style="width: 80px;" />
+            </label>
+            <label>
+                Instruções (opcional):<br />
+                <input id="progInstrucoes" type="text" style="width: 470px;" />
+            </label>
+        </div>
+
+        <!--<div style="margin-bottom:8px;">
+            <label>
+                Instruções (opcional):<br />
+                <input id="progInstrucoes" type="text" style="width: 400px;" />
+            </label>
+        </div>-->
+
+        <button id="btnSalvarProgramaCustom" type="button">Salvar programa customizado</button>
+    </fieldset>
+
+    <!-- CONTROLES DO MICRO-ONDAS -->
+    <fieldset>
+        <legend>Controles do Micro-ondas</legend>
+
+        <div class="controles-wrapper">
+            <div class="controles-col">
+                <h3>Configurações de aquecimento</h3>
+
+                <div class="linha-campos">
+                    <label>
+                        Tempo (s)
+                        <input id="tempo" type="number" min="1" max="120" />
+                    </label>
+
+                    <label>
+                        Potência (1..10)
+                        <input id="potencia" type="number" min="1" max="10" />
+                    </label>
+
+                    <label>
+                        Caractere
+                        <input id="caractere" type="text" maxlength="1" />
+                    </label>
+                </div>
+
+                <div class="linha-botoes">
+                    <button id="btnIniciar" type="button">Iniciar</button>
+                    <button id="btnInicioRapido" type="button">Início Rápido</button>
+                    <button id="btnPausar" type="button">Pausar/Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Status do Aquecimento</legend>
+        <!-- STATUS -->
+        <div id="statusContainer">
+            <div id="status"></div>
+            <div id="stringProcesso"></div>
+        </div>
+    </fieldset>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const apiBaseMicroondas = "/api/microondas";
+            const apiBaseAuth = "/api/auth";
+            const apiBaseProgramas = "/api/programas";
+
+            let authToken = null;
+            let programas = [];
+            let programaSelecionado = null;
+
+            const statusAuthEl = document.getElementById('statusAuth');
+            const btnIniciar = document.getElementById('btnIniciar');
+            const btnInicioRapido = document.getElementById('btnInicioRapido');
+            const btnPausar = document.getElementById('btnPausar');
+            const selectPrograma = document.getElementById('programa');
+            const detalhesPrograma = document.getElementById('detalhesPrograma');
+            const tempoInput = document.getElementById('tempo');
+            const potenciaInput = document.getElementById('potencia');
+            const caractereInput = document.getElementById('caractere');
+
+            const btnLogin = document.getElementById('btnLogin');
+            const btnLogout = document.getElementById('btnLogout');
+            const usuarioInput = document.getElementById('usuario');
+            const senhaInput = document.getElementById('senha');
+
+            const progNomeInput = document.getElementById('progNome');
+            const progAlimentoInput = document.getElementById('progAlimento');
+            const progTempoInput = document.getElementById('progTempo');
+            const progPotenciaInput = document.getElementById('progPotencia');
+            const progCaractereInput = document.getElementById('progCaractere');
+            const progInstrucoesInput = document.getElementById('progInstrucoes');
+            const btnSalvarProgramaCustom = document.getElementById('btnSalvarProgramaCustom');
+
+            function atualizarUiAutenticacao() {
+                if (!statusAuthEl || !btnIniciar || !btnInicioRapido || !btnPausar) return;
+
+                if (authToken) {
+                    statusAuthEl.textContent = "Autenticado (token ativo)";
+                    statusAuthEl.style.color = "green";
+                    btnIniciar.disabled = false;
+                    btnInicioRapido.disabled = false;
+                    btnPausar.disabled = false;
+                } else {
+                    statusAuthEl.textContent = "Não autenticado";
+                    statusAuthEl.style.color = "red";
+                    btnIniciar.disabled = true;
+                    btnInicioRapido.disabled = true;
+                    btnPausar.disabled = true;
+                }
+            }
+
+            function limparCamposControle() {
+                programaSelecionado = null;
+                if (selectPrograma) selectPrograma.value = "";
+                if (detalhesPrograma) {
+                    detalhesPrograma.textContent = "";
+                    detalhesPrograma.style.fontStyle = "normal";
+                }
+
+                if (tempoInput) {
+                    tempoInput.disabled = false;
+                    tempoInput.value = "";
+                }
+                if (potenciaInput) {
+                    potenciaInput.disabled = false;
+                    potenciaInput.value = "";
+                }
+                if (caractereInput) {
+                    caractereInput.disabled = false;
+                    caractereInput.value = "";
+                }
+            }
+
+            atualizarUiAutenticacao();
+
+            async function fetchAutenticado(url, options = {}) {
+                options.headers = options.headers || {};
+                options.headers['Content-Type'] = options.headers['Content-Type'] || 'application/json';
+
+                if (authToken) {
+                    options.headers['Authorization'] = `Bearer ${authToken}`;
+                }
+
+                const resp = await fetch(url, options);
+
+                if (resp.status === 401) {
+                    authToken = null;
+                    atualizarUiAutenticacao();
+                    alert("Não autorizado. Faça login novamente.");
+                    throw new Error("Não autorizado");
+                }
+
+                return resp;
+            }
+
+            // --- FUNÇÃO ÚNICA PARA ATUALIZAR STATUS NA TELA ---
+            function preencherStatus(dto, limparSeParado = false) {
+                if (!dto) return;
+
+                const statusEl = document.getElementById('status');
+                const stringProcEl = document.getElementById('stringProcesso');
+
+                if (statusEl) {
+                    statusEl.innerText =
+                        `Estado: ${dto.Estado} | Tempo: ${dto.TempoFormatado} | Potência: ${dto.Potencia}`;
+                }
+
+                // AQUI entra a string de aquecimento "...."
+                if (stringProcEl) {
+                    stringProcEl.innerText = dto.StringProcesso || '';
+                }
+
+                // Atualiza campos com o estado atual (para manual / sessão em andamento)
+                if ((!programaSelecionado || !programaSelecionado.EhPreDefinido) && dto.Estado === "Rodando") {
+                    if (dto.Potencia && potenciaInput && !potenciaInput.disabled) {
+                        potenciaInput.value = dto.Potencia;
+                    }
+                    if (dto.TempoRestanteSegundos && tempoInput && !tempoInput.disabled) {
+                        tempoInput.value = dto.TempoRestanteSegundos;
+                    }
+                    if (dto.Caractere && caractereInput && !caractereInput.disabled) {
+                        caractereInput.value = dto.Caractere;
+                    }
+                }
+
+                if (limparSeParado && dto.Estado === "Parado") {
+                    limparCamposControle();
+                }
+            }
+
+            // LOGIN
+            if (btnLogin && usuarioInput && senhaInput) {
+                btnLogin.addEventListener('click', async () => {
+                    const usuario = usuarioInput.value;
+                    const senha = senhaInput.value;
+
+                    if (!usuario || !senha) {
+                        alert("Informe usuário e senha.");
+                        return;
+                    }
+
+                    try {
+                        const res = await fetch(apiBaseAuth + "/login", {
+                            method: "POST",
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ Usuario: usuario, Senha: senha })
+                        });
+
+                        if (!res.ok) {
+                            if (res.status === 401) {
+                                alert("Usuário ou senha inválidos.");
+                            } else {
+                                alert("Erro ao autenticar. Código: " + res.status);
+                            }
+                            return;
+                        }
+
+                        const data = await res.json();
+                        authToken = data.token;
+                        atualizarUiAutenticacao();
+                        alert("Login efetuado com sucesso!");
+                        carregarProgramas();
+                        atualizarStatus(); // pega status inicial
+                    } catch (err) {
+                        console.error(err);
+                        alert("Erro inesperado ao tentar login.");
+                    }
+                });
+            }
+
+            // LOGOUT
+            if (btnLogout) {
+                btnLogout.addEventListener('click', async () => {
+                    try {
+                        if (authToken) {
+                            await fetchAutenticado(apiBaseAuth + "/logout", { method: "POST" });
+                        }
+                    } catch (e) {
+                        console.warn(e);
+                    } finally {
+                        authToken = null;
+                        atualizarUiAutenticacao();
+                        alert("Logout realizado.");
+                        const statusEl = document.getElementById('status');
+                        const stringProcEl = document.getElementById('stringProcesso');
+                        if (statusEl) statusEl.innerText = "Não autenticado";
+                        if (stringProcEl) stringProcEl.innerText = '';
+                    }
+                });
+            }
+
+            // Carregar lista de programas
+            async function carregarProgramas() {
+                if (!authToken || !selectPrograma) return;
+                try {
+                    const res = await fetchAutenticado(apiBaseProgramas, { method: "GET" });
+                    if (!res.ok) return;
+                    programas = await res.json();
+
+                    selectPrograma.innerHTML = "";
+                    const optPadrao = document.createElement("option");
+                    optPadrao.value = "";
+                    optPadrao.textContent = "-- Nenhum (tempo manual) --";
+                    selectPrograma.appendChild(optPadrao);
+
+                    programas.forEach(p => {
+                        const opt = document.createElement("option");
+                        opt.value = p.Id;
+                        opt.textContent = p.Nome + (!p.EhPreDefinido ? " (custom)" : "");
+                        selectPrograma.appendChild(opt);
+                    });
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+
+            // Selecionar programa
+            if (selectPrograma) {
+                selectPrograma.addEventListener('change', () => {
+                    const id = selectPrograma.value;
+                    if (!id) {
+                        programaSelecionado = null;
+                        if (detalhesPrograma) {
+                            detalhesPrograma.textContent = "";
+                            detalhesPrograma.style.fontStyle = "normal";
+                        }
+                        if (tempoInput) {
+                            tempoInput.disabled = false;
+                            tempoInput.value = "";
+                        }
+                        if (potenciaInput) {
+                            potenciaInput.disabled = false;
+                            potenciaInput.value = "";
+                        }
+                        if (caractereInput) {
+                            caractereInput.disabled = false;
+                            caractereInput.value = "";
+                        }
+                        return;
+                    }
+
+                    programaSelecionado = programas.find(p => p.Id === id);
+                    if (!programaSelecionado) return;
+
+                    if (detalhesPrograma) {
+                        detalhesPrograma.textContent =
+                            `Alimento: ${programaSelecionado.Alimento || "-"} | ` +
+                            `Tempo: ${programaSelecionado.TempoSegundos}s | ` +
+                            `Potência: ${programaSelecionado.Potencia} | ` +
+                            `Caractere: ${programaSelecionado.CaractereAquecimento} | ` +
+                            `Instruções: ${programaSelecionado.Instrucoes || "-"}`;
+
+                        detalhesPrograma.style.fontStyle = programaSelecionado.EhPreDefinido ? "normal" : "italic";
+                    }
+
+                    if (tempoInput) {
+                        tempoInput.value = programaSelecionado.TempoSegundos;
+                        tempoInput.disabled = programaSelecionado.EhPreDefinido;
+                    }
+                    if (potenciaInput) {
+                        potenciaInput.value = programaSelecionado.Potencia;
+                        potenciaInput.disabled = programaSelecionado.EhPreDefinido;
+                    }
+                    if (caractereInput) {
+                        caractereInput.value = programaSelecionado.CaractereAquecimento;
+                        caractereInput.disabled = programaSelecionado.EhPreDefinido;
+                    }
+                });
+            }
+
+            // INICIAR
+            if (btnIniciar) {
+                btnIniciar.addEventListener('click', async () => {
+                    if (!authToken) {
+                        alert("Faça login antes.");
+                        return;
+                    }
+
+                    const body = {};
+
+                    if (programaSelecionado && programaSelecionado.Id) {
+                        body.ProgramaId = programaSelecionado.Id;
+                    } else {
+                        const tempo = tempoInput && tempoInput.value !== "" ? parseInt(tempoInput.value, 10) : null;
+                        const potencia = potenciaInput && potenciaInput.value !== "" ? parseInt(potenciaInput.value, 10) : null;
+                        const caractere = caractereInput && caractereInput.value ? caractereInput.value : null;
+
+                        if (tempo !== null) body.TempoSegundos = tempo;
+                        if (potencia !== null) body.Potencia = potencia;
+                        if (caractere) body.CaractereAquecimento = caractere;
+                    }
+
+                    try {
+                        const res = await fetchAutenticado(apiBaseMicroondas + "/iniciar", {
+                            method: "POST",
+                            body: JSON.stringify(body)
+                        });
+
+                        if (!res.ok) {
+                            let msg = "Erro ao iniciar aquecimento.";
+                            try {
+                                const err = await res.json();
+                                if (err && err.Mensagem)
+                                    msg = err.Mensagem;
+                                else if (typeof err === "string")
+                                    msg = err;
+                            } catch { }
+                            alert(msg);
+                            return;
+                        }
+
+                        await atualizarStatus();
+                    } catch (e) {
+                        console.error(e);
+                        alert("Erro inesperado ao iniciar.");
+                    }
+                });
+            }
+
+            // INÍCIO RÁPIDO
+            if (btnInicioRapido) {
+                btnInicioRapido.addEventListener('click', async () => {
+                    if (!authToken) {
+                        alert("Faça login antes.");
+                        return;
+                    }
+                    try {
+                        const res = await fetchAutenticado(apiBaseMicroondas + "/iniciorapido", { method: "POST" });
+                        if (!res.ok) {
+                            alert("Erro ao acionar início rápido.");
+                            return;
+                        }
+                        await atualizarStatus();
+                    } catch (e) {
+                        console.error(e);
+                        alert("Erro inesperado no início rápido.");
+                    }
+                });
+            }
+
+            // PAUSAR / CANCELAR
+            if (btnPausar) {
+                btnPausar.addEventListener('click', async () => {
+                    if (!authToken) {
+                        alert("Faça login antes.");
+                        return;
+                    }
+                    try {
+                        const res = await fetchAutenticado(apiBaseMicroondas + "/pausarcancelar", { method: "POST" });
+                        if (!res.ok) {
+                            alert("Erro ao pausar/cancelar.");
+                            return;
+                        }
+                        await atualizarStatus(true);
+                    } catch (e) {
+                        console.error(e);
+                        alert("Erro inesperado ao pausar/cancelar.");
+                    }
+                });
+            }
+
+            // SALVAR PROGRAMA CUSTOMIZADO
+            if (btnSalvarProgramaCustom) {
+                btnSalvarProgramaCustom.addEventListener('click', async () => {
+                    if (!authToken) {
+                        alert("Faça login antes.");
+                        return;
+                    }
+
+                    const nome = progNomeInput.value.trim();
+                    const alimento = progAlimentoInput.value.trim();
+                    const tempo = parseInt(progTempoInput.value, 10);
+                    const potencia = parseInt(progPotenciaInput.value, 10);
+                    const caractere = progCaractereInput.value.trim();
+                    const instrucoes = progInstrucoesInput.value.trim();
+
+                    if (!nome || !alimento || !tempo || !potencia || !caractere) {
+                        alert("Preencha todos os campos obrigatórios (Nome, Alimento, Tempo, Potência e Caractere).");
+                        return;
+                    }
+
+                    const body = {
+                        Nome: nome,
+                        Alimento: alimento,
+                        TempoSegundos: tempo,
+                        Potencia: potencia,
+                        CaractereAquecimento: caractere[0],
+                        Instrucoes: instrucoes
+                    };
+
+                    try {
+                        const res = await fetchAutenticado(apiBaseProgramas + "/custom", {
+                            method: "POST",
+                            body: JSON.stringify(body)
+                        });
+
+                        if (!res.ok) {
+                            let msg = "Erro ao cadastrar programa.";
+                            try {
+                                const err = await res.json();
+                                if (err && err.Mensagem)
+                                    msg = err.Mensagem;
+                                else if (typeof err === "string")
+                                    msg = err;
+                            } catch { }
+                            alert(msg);
+                            return;
+                        }
+
+                        alert("Programa customizado cadastrado com sucesso!");
+
+                        progNomeInput.value = "";
+                        progAlimentoInput.value = "";
+                        progTempoInput.value = "";
+                        progPotenciaInput.value = "";
+                        progCaractereInput.value = "";
+                        progInstrucoesInput.value = "";
+
+                        await carregarProgramas();
+
+                    } catch (e) {
+                        console.error(e);
+                        alert("Erro inesperado ao cadastrar programa customizado.");
+                    }
+                });
+            }
+
+            // TICK – AGORA USA O DTO RETORNADO (inclui StringProcesso "....")
+            async function tick() {
+                if (!authToken) return;
+                try {
+                    const res = await fetchAutenticado(apiBaseMicroondas + "/tick", { method: "POST" });
+                    if (!res.ok) return;
+                    const dto = await res.json();
+                    preencherStatus(dto, false);
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+
+            // Atualizar status via GET /status (para chamadas iniciais / após ações)
+            async function atualizarStatus(limparSeParado = false) {
+                if (!authToken) return;
+                try {
+                    const res = await fetchAutenticado(apiBaseMicroondas + "/status", { method: "GET" });
+                    if (!res.ok) return;
+                    const dto = await res.json();
+                    preencherStatus(dto, limparSeParado);
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+
+            setInterval(tick, 1000);
+            // Não chama atualizarStatus aqui, porque ainda não está autenticado.
+        });
+    </script>
+
+</body>
+</html>
